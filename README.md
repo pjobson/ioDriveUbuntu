@@ -6,7 +6,7 @@ Installs the required bin tools and gets snuf's VSL drivers and installs them.
 
     git clone git@github.com:pjobson/ioDriveUbuntu.git
     cd ioDriveUbuntu
-   ./ubuntu_installer.sh
+    ./ubuntu_installer.sh
 
 I made this to copy to a machine without git:
 
