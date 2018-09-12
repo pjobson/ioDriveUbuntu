@@ -4,9 +4,9 @@ Installs the required bin tools and gets snuf's VSL drivers and installs them.
 
 ## Usage
 
-  git clone git@github.com:pjobson/ioDriveUbuntu.git
-  cd ioDriveUbuntu
-  ./ubuntu_installer.sh
+    git clone git@github.com:pjobson/ioDriveUbuntu.git
+    cd ioDriveUbuntu
+   ./ubuntu_installer.sh
 
 I made this to copy to a machine without git:
 
@@ -22,7 +22,7 @@ From here I use parted to set it up as I would a normal drive.
 
 To show the available tools you can do:
 
-  ./fioToolInfo.sh
+    ./fioToolInfo.sh
 
 ## Benchmarks
 
