@@ -2,6 +2,28 @@
 
 Installs the required bin tools and gets snuf's VSL drivers and installs them.
 
+## Usage
+
+  git clone git@github.com:pjobson/ioDriveUbuntu.git
+  cd ioDriveUbuntu
+  ./ubuntu_installer.sh
+
+I made this to copy to a machine without git:
+
+* Installs git
+* Installs fio-util
+* Clones snuf's iomemory-vsl
+* Compiles and installs driver.
+* Shows the status.
+
+From here I use parted to set it up as I would a normal drive.
+
+### FIO Tools
+
+To show the available tools you can do:
+
+  ./fioToolInfo.sh
+
 ## Benchmarks
 
 ### 1 MiB @ 1000 Samples
