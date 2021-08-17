@@ -11,7 +11,7 @@ sudo apt install -f
 
 echo "Getting sunf's driver"
 
-git clone https://github.com/snuf/iomemory-vsl.git
+git clone https://github.com/pjobson/iomemory-vsl.git
 
 echo "Attempting to compile and install driver"
 
