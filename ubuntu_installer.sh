@@ -1,8 +1,12 @@
 #!/bin/bash
 
-echo "Installing git"
+CPUS=$(nproc)
 
-sudo apt install git
+exit
+
+echo "Installing git dependancies"
+
+sudo apt install -y git aufs-tools
 
 echo "Installing FIO Utils"
 
@@ -11,16 +15,16 @@ sudo apt install -f
 
 echo "Getting sunf's driver"
 
-git clone https://github.com/pjobson/iomemory-vsl.git
+git clone https://github.com/RemixVSL/iomemory-vsl.git
 
 echo "Attempting to compile and install driver"
 
-sudo cp -r iomemory-vsl/root/usr/src/iomemory-vsl-3.2.15 /usr/src/
-sudo mkdir -p /var/lib/dkms/iomemory-vsl/3.2.15/build
-sudo ln -s /usr/src/iomemory-vsl-3.2.15 /var/lib/dkms/iomemory-vsl/3.2.15/source
-sudo dkms build -m iomemory-vsl -v 3.2.15
-sudo dkms install -m iomemory-vsl -v 3.2.15
-sudo modprobe iomemory-vsl
+cd iomemory-vsl
+git fetch --all --tags
+git checkout v5.12.1
+make module
+sudo insmod root/usr/src/iomemory-vsl-3.2.16/iomemory-vsl.ko
+
 
 echo "Fusion IO Status"
 
